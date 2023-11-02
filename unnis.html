@@ -3,12 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="viewport" content="orientation=landscape" /> -->
     <title>Unnispick</title>
+    <style>
+        @media screen and (orientation: landscape) {
+            .tess2 {
+                display: none ;
+            }
+            .tess1 {
+                display: flex ;
+            }
+        }
+        @media screen and (min-width: 760px) and (max-width: 830px) {
+            .tess1 {
+                display: block ;
+            }
+            .tess2 {
+                display: flex;
+            }
+        }
+    </style>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
     <div
-      class="bg-cover bg-center bg-no-reapeat fixed w-full h-full hidden sm:block"
+      class="bg-cover bg-center bg-no-reapeat fixed w-full h-full hidden sm:block tess2"
       style="background-image: url('/asset/BGbaasic.svg')"
     >
       <div class="grid grid-cols-4 h-full w-full">
@@ -182,7 +202,7 @@
       </footer>
     </div>
     <div
-      class="bg-no-repeat bg-center bg-cover fixed w-full h-screen md:hidden overflow-y-auto"
+      class="bg-no-repeat bg-center bg-cover fixed w-full h-screen lg:hidden overflow-y-auto tess1"
       style="background-image: url('/asset/whitebg.png')"
     >
       <div class="w-full h-full mb-10">
